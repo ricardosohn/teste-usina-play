@@ -1,0 +1,28 @@
+<ion-toolbar style="border-radius: 0 0 60px 60px;">
+  <ion-title>
+    <div class="user-info-wrapper">
+      <div class="user-info-container">
+        <div class="user-profile">
+          <div class="user-image">
+            <img src="../../../../../assets/images/person-face.jpg" alt="User Image">
+          </div>
+          <div class="user-details">
+            <h3>{{name}}</h3>
+            <p [class]="colorClass">Nível {{getLevelName()}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-info-buttons">
+        <div class="my-body-button app-button-wrapper ">
+          <div class="icon-border"><ion-icon name="accessibility" slot="icon-only"></ion-icon></div>
+          <p>MEU CORPO</p>
+        </div>
+        <div class="achievements-button app-button-wrapper ">
+          <div class="icon-border"><ion-icon name="trophy" slot="icon-only"></ion-icon></div>
+          <p>OBJETIVOS E CONQUISTAS</p>
+        </div>
+      </div>
+    </div>
+  </ion-title>
+</ion-toolbar>

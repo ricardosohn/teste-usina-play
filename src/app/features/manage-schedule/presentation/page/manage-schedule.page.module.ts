@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { ManageSchedulePage } from './manage-schedule.page';
 import { ManageScheduleStateModule } from '../state/manage-schedule.state.module';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     ]),
     ManageScheduleStateModule,
   ],
-  declarations: [ManageSchedulePage, AppHeaderComponent],
+  declarations: [ManageSchedulePage, AppHeaderComponent, UserInfoComponent],
 })
 export class ManageSchedulePageModule { }

@@ -1,0 +1,105 @@
+.user-info-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .user-info-container {
+        height: 140px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 24px 0 24px;
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+
+            & .user-image {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .user-details {
+            margin-left: 8px;
+
+            & h3 {
+                font-family: 'Reforma Grotesk';
+                margin: 0;
+                font-size: 26px;
+            }
+
+            & p {
+                font-family: 'Reforma Grotesk';
+                margin: 2px 0 0 0;
+                font-size: 20px;
+                
+                &.level-gold {
+                    color: #c9a237;
+                }
+                
+                &.level-platinum {
+                    color: #e7e7e7;
+                }
+
+                &.level-purple {
+                    color: #522EA7;
+                }
+            }
+        }
+
+    }
+
+    .user-info-buttons {
+        background-color: var(--app-secondary-background-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row;
+        align-self: center;
+        width: fit-content;
+        margin-bottom: 16px;
+        padding: 0 12px 0 12px;
+        line-height: 4px;
+        border-radius: 50px;
+        font-size: 18px;
+
+        & .app-button-wrapper {
+            font-family: 'Solano Gothic';
+            color: var(--app-secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row;
+            margin: 0 8px 0 8px;
+        }
+
+        & .icon-border {
+            border-radius: 50%;
+            border-color: var(--app-secondary-color);
+            border-style: solid;
+            border-width: 1px;
+            padding: 2px;
+        }
+
+        & ion-icon {
+            font-size: 14px;
+        }
+
+        & p {
+            padding-top: 2px;
+            padding-left: 4px;
+        }
+    }
+}
