@@ -45,4 +45,13 @@ ion-header {
     }
   }
   
+  /* 
+    Hack pra remover a sombra da toolbar do ionic.
+    Para mais informações, veja a issue no github do ionic:
+    https://github.com/ionic-team/ionic-framework/issues/17544
+    https://github.com/ionic-team/ionic-framework/issues/22127
+  */
+  .hotfix.header-md::after {
+    background: none;
+  }
   
