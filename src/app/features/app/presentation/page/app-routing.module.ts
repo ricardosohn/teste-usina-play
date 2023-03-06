@@ -3,12 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'manage-schedule',
+    loadChildren: () => import('../../../manage-schedule/presentation/page/manage-schedule.page.module').then(
+      m => m.ManageSchedulePageModule
+    ),
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'manage-schedule',
     pathMatch: 'full'
   },
 ];
