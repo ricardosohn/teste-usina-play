@@ -56,6 +56,7 @@ export class ManageScheduleState implements NgxsAfterBootstrap {
   @Action(LoadProgramsAction)
   async loadPrograms({ patchState }: StateContext<ManageScheduleStateModel>) {
     patchState({ isLoading: true });
+    console.log('[ManageScheduleState] calling loadPrograms');
 
     const res = await this.loadProgramsUseCase.execute();
 
@@ -79,6 +80,7 @@ export class ManageScheduleState implements NgxsAfterBootstrap {
     patchState({ isLoading: true });
 
     const res = await this.loadContentsUseCase.execute();
+    console.log('[ManageScheduleState] calling loadContents');
 
     if (res instanceof Error) {
       patchState({

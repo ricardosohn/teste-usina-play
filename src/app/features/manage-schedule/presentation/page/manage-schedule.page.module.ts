@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ManageSchedulePage } from './manage-schedule.page';
 import { ManageScheduleStateModule } from '../state/manage-schedule.state.module';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { ManageScheduleStateModule } from '../state/manage-schedule.state.module
     ]),
     ManageScheduleStateModule,
   ],
-  declarations: [ManageSchedulePage],
+  declarations: [ManageSchedulePage, AppHeaderComponent],
 })
 export class ManageSchedulePageModule { }

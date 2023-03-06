@@ -1,0 +1,47 @@
+$secondaryGlowColor: #FFA500;
+$accentGlowColor: #a5f5e1;
+
+ion-header {
+    --background: var(--app-light-background);
+}
+
+
+/// Logo Header
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/// Notification button
+.notification-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-color: var(--app-button-shadow-color);
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+
+    & ion-icon {
+        font-size: 16px;
+        color: var(--app-secondary-color);
+        filter: drop-shadow(0 0 2px $secondaryGlowColor);
+    }
+
+    & .notification-indicator {
+        position: absolute;
+        top: 2px;
+        right: -1px;
+        width: 9px;
+        height: 9px;
+        background-color: var(--app-accent-color);
+        clip: auto !important;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 2px $accentGlowColor);
+    }
+  }
+  
+  
