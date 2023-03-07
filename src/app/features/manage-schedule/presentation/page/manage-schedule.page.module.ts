@@ -7,6 +7,8 @@ import { ManageSchedulePage } from './manage-schedule.page';
 import { ManageScheduleStateModule } from '../state/manage-schedule.state.module';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { ContentCardComponent } from './components/content-card/content-card.component';
+import { CategorySectionComponent } from './components/category-section/category-section.component';
 
 @NgModule({
   imports: [
@@ -21,6 +23,6 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     ]),
     ManageScheduleStateModule,
   ],
-  declarations: [ManageSchedulePage, AppHeaderComponent, UserInfoComponent],
+  declarations: [ManageSchedulePage, AppHeaderComponent, UserInfoComponent, ContentCardComponent, CategorySectionComponent],
 })
 export class ManageSchedulePageModule { }

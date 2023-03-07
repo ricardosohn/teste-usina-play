@@ -1,10 +1,12 @@
 <app-header [hotfix]="true"></app-header>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="main-content">
   <!-- Caso houvesse um sistema de login, era só usar um serviço ou mesmo o storage 
    para saber qual parametro passar pra esse componente -->
   <app-user-info name="Leonardo Santos" level="purple"></app-user-info>
 
-  <div id="container">
-    <h1>It works!</h1>
+  <div class="main-container">
+    <app-category-section name="PERSONAL ONLINE" [isPersonal]="true"></app-category-section>
+    <app-category-section name="PROGRAMAS" [isProgram]="true"></app-category-section>
+    <app-category-section name="CONTEÚDOS" [isContent]="true"></app-category-section>
   </div>
 </ion-content>
