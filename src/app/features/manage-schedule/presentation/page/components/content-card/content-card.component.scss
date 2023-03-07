@@ -1,0 +1,77 @@
+$cardWidth: 240px;
+$cardHeight: 154px;
+$cardRadius: 16px;
+
+.content-card-container {
+    width: $cardWidth; 
+    height: $cardHeight; 
+    background-color: #202020;
+    border-radius: $cardRadius;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    background-blend-mode: luminosity;
+    flex-shrink: 0; 
+    display: inline-block;
+
+    & .card-content {
+        font-family: 'Reforma Grotesk';
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 100%;
+        border-radius: $cardRadius;
+
+        &.buttonMode {
+            align-items: center;
+            justify-content: center;
+            border-radius: $cardRadius;
+            background-color: rgba(0, 0, 0, 0.7);
+            flex-direction: row;
+            gap: 8px;
+
+            & .icon-border {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                border-color: var(--app-primary-color);
+                border-style: solid;
+                border-width: 1px;
+                padding: 2px;
+                margin-top: 2px;
+                margin-left: 8px;
+    
+                & ion-icon {
+                    position: relative;
+                    left: 5px;
+                    top: 4px;
+                    font-size: 20px;
+                    --color: var(--app-primary-color);
+                }
+            }
+
+            & span {
+                font-family: 'Solano Gothic';
+                font-size: 20px;
+                line-height: 19px;
+            }
+        }
+
+        & .card-subtitle {
+            font-family: 'Solano Gothic';
+            font-weight: bold;
+            margin-left: 12px;
+            font-size: 14px;
+            color: var(--app-secondary-color);
+        }
+
+        & .card-title {
+            font-size: 22px;
+            margin-bottom: 16px;
+            margin-left: 12px;
+        }
+    }
+}

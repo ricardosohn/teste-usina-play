@@ -1,0 +1,10 @@
+<div class="content-card-container" (click)="onCardPressed()" style="background-image: url('{{ src }}')">
+  <div *ngIf="buttonMode && buttonPressed" class="card-content buttonMode">
+    <div class="icon-border"><ion-icon name="add" slot="icon-only"></ion-icon></div>
+    <span>NOVO<br>TREINO</span>
+  </div>  
+  <div *ngIf="!buttonMode || (buttonMode && !buttonPressed)" class="card-content">
+    <span *ngIf="started" class="card-subtitle">continuar treinando</span>
+    <span class="card-title">{{title}}</span>
+  </div>
+</div>
