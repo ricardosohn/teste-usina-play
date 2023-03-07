@@ -1,0 +1,41 @@
+<div class="category-container">
+  <div class="title-row">
+    <span class="section-title">{{name}}</span>
+    
+    <div *ngIf="isPersonal" class="icon-border">
+      <ion-icon name="add" slot="icon-only"></ion-icon>
+    </div>
+    
+    <div *ngIf="isProgram" class="new-chip">
+      <span>NOVO</span>
+    </div>
+  </div>
+  
+  <!-- Esses 3 casos do ng-if seriam usados em conjunt com um ng-for e um parâmetro com os dados de cada tipo 
+  específico de conteúdo, para gerar os cards de acordo com o que tiver disponível -->
+  <div *ngIf="isPersonal" class="cards-list-container">
+    <app-content-card title="ESPORTES" [buttonMode]="true" src="../../../../../../../assets/images/esportes.jpg"></app-content-card>
+    <app-content-card title="LEVANTAMENTO DE PESO" [buttonMode]="true"></app-content-card>
+    <app-content-card title="YOGA" [buttonMode]="true" src="../../../../../../../assets/images/yoga.png"></app-content-card>
+    <app-content-card title="ARTES MARCIAIS" [buttonMode]="true"  src="../../../../../../../assets/images/martial_arts.jpg"></app-content-card>
+    <app-content-card title="TREINAMENTO FUNCIONAL" [buttonMode]="true" src="../../../../../../../assets/images/funcional.jpg"></app-content-card>
+  </div>
+
+  
+  <div *ngIf="isProgram" class="cards-list-container">
+    <app-content-card title="LEVANTAMENTO DE PESO" [started]="true"></app-content-card>
+    <app-content-card title="ARTES MARCIAIS"  src="../../../../../../../assets/images/martial_arts.jpg"></app-content-card>
+    <app-content-card title="YOGA" src="../../../../../../../assets/images/yoga.png"></app-content-card>
+    <app-content-card title="ESPORTES" src="../../../../../../../assets/images/esportes.jpg"></app-content-card>
+    <app-content-card title="TREINAMENTO FUNCIONAL" src="../../../../../../../assets/images/funcional.jpg"></app-content-card>
+  </div>
+
+  <div *ngIf="isContent" class="cards-list-container">
+    <app-content-card title="TREINAMENTO FUNCIONAL" src="../../../../../../../assets/images/funcional.jpg"></app-content-card>
+    <app-content-card title="ESPORTES" src="../../../../../../../assets/images/esportes.jpg"></app-content-card>
+    <app-content-card title="ARTES MARCIAIS" src="../../../../../../../assets/images/martial_arts.jpg"></app-content-card>
+    <app-content-card title="LEVANTAMENTO DE PESO" src="../../../../../../../assets/images/deadlift.jpg"></app-content-card>
+    <app-content-card title="YOGA" src="../../../../../../../assets/images/yoga.png"></app-content-card>
+  </div>
+
+</div>

@@ -1,0 +1,93 @@
+
+$cardHeight: 154px;
+$secondaryGlowColor: #FFA500;
+
+.category-container {
+    display: flex; 
+    flex-direction: column;
+    padding-bottom: 42px;
+    white-space: nowrap;
+    position: relative;
+
+    & .title-row {
+        display: flex;
+        flex-direction: row;
+    
+        & .section-title {
+            font-family: 'Solano Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 26px;
+            padding-bottom: 12px;
+        }
+    
+        & .icon-border {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border-color: var(--app-secondary-color);
+            border-style: solid;
+            border-width: 1px;
+            padding: 2px;
+            margin-top: 2px;
+            margin-left: 8px;
+        }
+    
+        & ion-icon {
+            color: var(--app-secondary-color);
+            font-size: 16px;
+            position: relative;
+            left: 1px;
+            top: 1px;
+        }
+
+        & .new-chip {
+            margin-left: 6px;
+            margin-top: 4px;
+            background-color: var(--app-secondary-color);
+            filter: drop-shadow(0 0 4px $secondaryGlowColor);
+            color: var(--app-primary-color);
+            width: fit-content;
+            height: fit-content;
+            border-radius: 8px;
+            height: 12px;
+            padding: 0 4px 0 4px;
+
+            & span {
+                font-family: 'Solano Gothic', sans-serif;
+                font-size: 10px;
+                line-height: 8px;
+                position: relative;
+                top: -4px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    
+    & .cards-list-container {
+        display: flex;
+        overflow-x: scroll;
+        gap: 16px;
+        padding-right: 24px;
+    } 
+
+    & .cards-list-container::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        /// Sombra escura no canto direito onde termina o card
+        background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        z-index: 1;
+        
+        /// Tamanho da sombra o mesmo do card, ajustado com o margin pra ficar em cima do card. 
+        /// Poderia ser usado flex-box também (melhor)
+        height: $cardHeight;
+        margin-top: 41px;
+      }
+    
+}
+
